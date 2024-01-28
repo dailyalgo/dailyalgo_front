@@ -1,0 +1,19 @@
+.answer-item-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-bottom: 2px solid $gray20;
+  padding-bottom: 48px;
+  padding-top: 24px;
+
+  > .answer-content-wrap {
+    padding-left: 55px;
+
+    .content-wrap {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.filter-modal {
+  .filter-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+
+    .filter-item {
+      @include transition-default(background-color);
+      display: flex;
+      height: 35px;
+      width: fit-content;
+      min-width: 60px;
+      align-items: center;
+      justify-content: center;
+      border-color: $gray80;
+      border-radius: 20px;
+      padding: 0 15px;
+      font-size: 14px;
+      background-color: $gray10;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $gray20;
+      }
+    }
+
+    .filter-selected-item {
+      @extend .filter-item;
+      background: $primary-1;
+      color: $white;
+    }
+
+    .result-none-text {
+      color: $gray60;
+    }
+  }
+}

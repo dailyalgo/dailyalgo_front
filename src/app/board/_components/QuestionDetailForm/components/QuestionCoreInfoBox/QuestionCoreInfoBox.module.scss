@@ -1,0 +1,52 @@
+.question-core-info-box-wrap {
+  padding: 28px 20px;
+  border: 1px solid $gray20;
+  border-radius: 16px;
+  width: 380px;
+  height: fit-content;
+
+  .problem-name {
+    @include head-4;
+
+    color: $black;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 8px;
+
+    > div {
+      display: flex;
+      gap: 16px;
+
+      dt {
+        @include body-1;
+
+        width: 60px;
+        color: $black;
+        font-weight: 600;
+      }
+
+      dd {
+        @include body-1;
+
+        color: $gray80;
+
+        [class*="problem-tag"] {
+          height: 24px;
+        }
+
+        &.tag-list {
+          display: flex;
+          gap: 4px;
+        }
+      }
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 28px;
+  }
+}

@@ -1,0 +1,15 @@
+.code-editor-wrap {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  height: auto;
+  min-height: 330px;
+  flex-direction: column;
+  padding: 12px 4px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+
+  > section {
+    flex: 1;
+  }
+}

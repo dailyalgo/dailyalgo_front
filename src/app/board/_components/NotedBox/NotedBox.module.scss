@@ -1,0 +1,39 @@
+.noted-box-wrap {
+  padding: 28px 20px;
+  border-radius: 16px;
+  background-color: $gray10;
+
+  .box-title {
+    @include head-4;
+
+  }
+
+  .sub-title {
+    @include body-1;
+
+    display: block;
+    margin-top: 16px;
+  }
+
+  .noted-list {
+    margin-top: 4px;
+
+    li {
+      @include body-1;
+
+      position: relative;
+      padding-left: 14px;
+
+      &::before {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $gray60;
+        content: '';
+      }
+    }
+  }
+}

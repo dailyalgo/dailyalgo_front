@@ -1,0 +1,99 @@
+.home-layout-wrap {
+  width: 1240px;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 0 30px;
+}
+
+.home-layout-inner {
+  display: flex;
+  margin-top: 28px;
+  gap: 30px;
+
+  .list-wrap {
+    flex: 1;
+
+    .list-title {
+      @include head-2;
+    }
+
+    .sub-title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 2px solid $gray20;
+      margin-top: 20px;
+
+      .sub-title {
+        @include head-4;
+      }
+    }
+
+    .filter-wrap {
+      display: flex;
+      gap: 4px;
+
+      .source-dropdown {
+        min-width: 120px;
+      }
+
+      .filter-btn {
+        @include body-1;
+
+        cursor: pointer;
+        padding: 8px 26px;
+        height: 40px;
+        border-radius: 4px;
+
+        background-color: $white;
+        color: #898989;
+        border: 1px solid #898989;
+
+        .filter-btn-inner {
+          display: flex;
+          gap: 4px;
+
+          svg {
+            position: relative;
+            top: 3px;
+            fill: #898989;
+          }
+        }
+
+        &:hover {
+          color: $primary-1;
+          border: 1px solid $primary-1;
+
+          svg {
+            fill: $primary-1;
+          }
+        }
+      }
+    }
+
+    .question-list {
+      > li {
+        padding-top: 20px;
+
+        + li {
+          border-top: 1px solid $gray20;
+        }
+      }
+    }
+
+    .none-answer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20vh;
+      color: $gray60;
+    }
+  }
+
+  .advertise-wrap {
+    width: 380px;
+    height: 712px;
+    background-color: #f5f5f5;
+  }
+}

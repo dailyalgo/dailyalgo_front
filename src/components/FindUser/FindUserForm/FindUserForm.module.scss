@@ -1,0 +1,15 @@
+.find-user-form {
+  margin-top: 36px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 36px;
+  }
+  .state-change-btn {
+    margin-top: 12px;
+    text-decoration: underline;
+    color: $color-blue;
+  }
+}

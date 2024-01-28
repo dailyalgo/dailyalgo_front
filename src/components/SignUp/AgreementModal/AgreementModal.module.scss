@@ -1,0 +1,46 @@
+.terms-wrap {
+  @include scroll-style;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  color: $gray60;
+  line-height: 1.6;
+  padding: 0 10px;
+  padding-bottom: 30px;
+  gap: 16px;
+
+  .content-wrap {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      @include head-4;
+      color: $gray80;
+    }
+
+    h2 {
+      @include body-1;
+      color: $gray80;
+      margin-bottom: 8px;
+    }
+
+    .inner-text {
+      margin-left: 12px;
+    }
+
+    p {
+      @include body-2;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}

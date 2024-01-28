@@ -1,0 +1,13 @@
+.comment-input-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 8px 14px;
+  border: 1px solid $gray20;
+  border-radius: 8px;
+
+  .input {
+    flex: 1;
+    margin-right: 8px;
+  }
+}

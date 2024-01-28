@@ -1,0 +1,53 @@
+.footer-wrap {
+  width: 1200px;
+  height: 360px;
+  // position: absolute;
+  bottom: 0;
+  left: 0;
+  // 임시 border
+  border-top: 1px solid #999;
+
+  .contents-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 57px;
+    height: 250px;
+    background-color: white;
+
+    .info-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 14px;
+      gap: 2rem;
+      span { 
+        line-height: 1.5;
+      } 
+      .info-top,
+      .info-bottom {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .logo-img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+
+
+  .copyright {
+    height: 60px;
+    background-color: #EEEEEE;
+    text-align: center;
+    span {
+      position: relative; 
+      bottom: 0;
+      top: 50%; 
+      transform: translateY(-50%); 
+    }
+  }
+}

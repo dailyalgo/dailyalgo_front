@@ -1,0 +1,53 @@
+.comment-item-wrap {
+  display: flex;
+  gap: 16px;
+
+  .comment-item {
+    margin-top: -4px;
+  }
+
+  .comment-contents {
+    @include body-1;
+    width: 100%;
+
+    & + a {
+      margin-top: 2px;
+    }
+
+    .comment-info {
+      @include body-2;
+      display: flex;
+      gap: 3px;
+
+      .user-nickname {
+        color: $primary-1;
+      }
+
+      .like-btn {
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+
+        > span {
+          position: relative;
+          top: -3px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  .edit-wrap {
+    display: flex;
+    gap: 5px;
+
+    > div {
+      color: $gray30;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $primary-1;
+      }
+    }
+  }
+}

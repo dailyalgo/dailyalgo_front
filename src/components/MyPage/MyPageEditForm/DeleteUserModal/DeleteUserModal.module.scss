@@ -1,0 +1,18 @@
+.delete-user-modal-wrap {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  .modal-header {
+    @include head-4;
+    margin-bottom: 20px;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+
+  }
+}

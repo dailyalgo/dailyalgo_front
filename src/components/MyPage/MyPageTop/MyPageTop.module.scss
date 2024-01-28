@@ -1,0 +1,119 @@
+.my-page-top-wrap {
+  width: 100%;
+  background-color: #f6f6f6;
+
+  .my-page-top-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1240px;
+    padding: 56px 30px;
+    margin: 0 auto;
+    gap: 36px;
+
+    .user-wrap {
+      display: flex;
+      gap: 37px;
+
+      .info-wrap {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8px;
+        justify-content: center;
+
+        .nickname {
+          color: $black;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 35px;
+        }
+
+        .introduce {
+          min-height: 23px;
+          margin-top: 12px;
+          color: #000;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 23px;
+        }
+
+        .organization-list {
+          display: flex;
+          margin-top: 8px;
+          gap: 8px;
+
+          .organization-item {
+            color: $primary-1;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+        }
+
+        .figure-info-wrap {
+          display: flex;
+          margin-top: 4px;
+          gap: 12px;
+
+          > div {
+            position: relative;
+            display: flex;
+            gap: 4px;
+
+            & + div {
+              &::before {
+                @include content;
+
+                top: 50%;
+                left: -6px;
+                width: 1px;
+                height: 16px;
+                background-color: $gray20;
+                transform: translateY(-50%);
+              }
+            }
+
+            dt,
+            dd {
+              color: #898989;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+        }
+
+        .social-wrap {
+          display: flex;
+          margin-top: 12px;
+          gap: 16px;
+
+          .social-item {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+
+            &-title {
+              color: $black;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 20px;
+            }
+
+            &-count {
+              color: $black;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+            }
+          }
+
+          .disabled {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}

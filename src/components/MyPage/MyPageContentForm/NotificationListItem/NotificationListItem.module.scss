@@ -1,0 +1,40 @@
+.notification-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  border-bottom: solid 1px $gray20;
+  gap: 4px;
+
+  &.not-read-item {
+    background-color: hsla(221, 85%, 52%, 0.05);
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .notification-top-content {
+      @include body-2;
+      font-weight: 600;
+      cursor: pointer;
+
+      span {
+        color: $primary-1;
+        font-weight: 600;
+        margin-right: 3px;
+      }
+    }
+
+    .notification-time {
+      @include body-3;
+      color: $gray60;
+    }
+  }
+
+  &-bottom {
+    span {
+      @include body-2;
+    }
+  }
+}

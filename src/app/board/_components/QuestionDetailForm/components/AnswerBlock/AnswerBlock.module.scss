@@ -1,0 +1,22 @@
+.answer-block-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .answer-block-top {
+    > h3 {
+      @include head-3;
+    }
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .none-answer-wrap {
+    color: #898989;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+  }
+}

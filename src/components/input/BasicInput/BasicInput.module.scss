@@ -1,0 +1,35 @@
+.common-input {
+  &[type="text"] {
+    @include transition-default(border-color);
+    @include body-1;
+  
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+    border: 1px solid $gray20;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+  
+    &:focus:not(:disabled, .error) {
+      border-color: $primary-1;
+      outline: none;
+    }
+  
+    &:disabled {
+      cursor: not-allowed;
+      color: $gray20
+    }
+  
+    &.error {
+      border-color: $negative;
+    }
+  }
+}
+
+.size-sm {
+  height: 40px;
+}
+
+.size-md {
+  height: 48px;
+}

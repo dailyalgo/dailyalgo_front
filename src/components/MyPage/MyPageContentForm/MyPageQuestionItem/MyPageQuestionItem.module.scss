@@ -1,0 +1,38 @@
+.question-item-wrap {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  padding-left: 6px;
+  gap: 24px;
+  border-bottom: solid 1px $gray20;
+
+  .question-contents-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .question-contents-top {
+      display: flex;
+      justify-content: space-between;
+
+      .question-title {
+        @include head-4;
+        line-height: 1;
+        cursor: pointer;
+      }
+    }
+
+    .question-tags {
+      display: flex;
+      gap: 8px;
+    }
+
+    .write-btn {
+      @include body-2;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+}

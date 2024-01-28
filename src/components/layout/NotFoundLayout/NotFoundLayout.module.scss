@@ -1,0 +1,27 @@
+.not-found-wrap {
+  display: flex;
+  width: 1240px;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh auto;
+  flex-direction: column;
+
+  .not-found-img {
+    width: 40%;
+  }
+
+  .text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    h1 {
+      @include head-4;
+    }
+
+    .link-btn {
+      color: $primary-1;
+    }
+  }
+}

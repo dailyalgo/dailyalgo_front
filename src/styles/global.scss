@@ -1,0 +1,64 @@
+// .toast-wrap {
+//   bottom: 40px !important;
+//   left: 50% !important;
+//   width: max-content !important;
+//   padding: 0 !important;
+//   transform: translateX(-50%) !important;
+
+//   @include desktop {
+//     bottom: 60px !important;
+//     width: auto !important;
+//     max-width: 800px;
+//   }
+
+//   .toast {
+//     min-height: auto;
+//     padding: 16px 20px;
+//     border-radius: 8px;
+//     margin-bottom: 0;
+//     background-color: $gray80;
+
+//     @include desktop {
+//       padding: 20px 24px;
+//     }
+
+//     [class*="toast-body"] {
+//       align-items: flex-start;
+//       padding: 0;
+//       color: $opacity-white90 !important;
+
+//       @include heading6;
+
+//       [class*="toast-icon"] {
+//         margin-top: 2px;
+//         margin-inline-end: 7px;
+//       }
+//     }
+//   }
+// }
+
+// :root {
+//   // utilities
+//   --debug: 0;
+//   --supported: 0;
+//   --not-supported: 0;
+
+//   // Pen vars
+//   --card-color: hsl(260deg 100% 3%);
+//   --text-color: hsl(260deg 10% 55%);
+//   --card-radius: 3.6vw;
+//   --card-width: 35vw;
+//   --border-width: 2px;
+//   --bg-size: 1;
+//   --hue: 0;
+//   --hue-speed: 1;
+//   --rotate: 0;
+//   --animation-speed: 4s;
+//   --interaction-speed: 0.55s;
+//   --glow-scale: 1.5;
+//   --scale-factor: 1;
+//   --glow-blur: 6; // 6
+//   --glow-opacity: 1; // 0.6
+//   --glow-radius: 100; // 100
+//   --glow-rotate-unit: 1deg;
+// }

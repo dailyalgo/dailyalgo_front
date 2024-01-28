@@ -1,0 +1,224 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+button,
+video {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-family: "Noto Sans Korean", "Apple SD Gothic Neo", arial, sans-serif;
+  font-feature-settings: "cv13" on, "calt" off;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+  word-break: keep-all;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu,
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  margin: 0;
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  padding: 0;
+  border: none;
+  margin: 0;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/*  input 화살표 숨기기
+    크롬, 사파리, 엣지, 오페라
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* 파이어폭스 */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff00 inset;
+
+  // -webkit-text-fill-color: $black;
+}
+
+.a11y {
+  @include a11y;
+}
+
+html {
+  // background-color: $black;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+// 디바이스 변경시 display none/block 방식을 사용하기 위한 클래스
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
+.show-flex-inline {
+  display: flex !important;
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading="lazy"] {
+    clip-path: inset(0.6px);
+  }
+}

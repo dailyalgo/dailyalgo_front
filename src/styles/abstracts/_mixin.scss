@@ -1,0 +1,230 @@
+/* scroll */
+@mixin scroll($width: 4px, $thumb: $gray70, $track: transparent) {
+  $scrollbar-thumb-width: $width;
+  $scrollbar-thumb-color: $thumb;
+  $scrollbar-track-color: $track;
+
+  /* Chrome, Opera */
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: $scrollbar-thumb-width;
+    height: $scrollbar-thumb-width;
+
+    &-track {
+      background-color: $scrollbar-track-color;
+    }
+
+    &-thumb {
+      // border: 1px solid $white;
+      background-color: $scrollbar-thumb-color;
+    }
+
+    &-track,
+    &-thumb {
+      border-radius: 8px;
+    }
+  }
+
+  scrollbar-width: thin;
+}
+
+@mixin font-face($name, $path, $weight) {
+  @font-face {
+    /* stylelint-disable-next-line scss/no-global-function-names */
+    font-family: quote($name);
+    font-weight: $weight;
+    src: url("#{$path}.woff") format("woff");
+  }
+}
+
+/* Responsive */
+// breakpoint
+$breakpoint-xs: 360px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+
+// ~ 359
+@mixin xs {
+  @media (max-width: #{$breakpoint-xs - 1px}) {
+    @content;
+  }
+}
+
+// ~ 1023
+@mixin sm {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+// 768 ~ 1023
+@mixin md {
+  @media (min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+// 1024 ~
+@mixin lg {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+// ~ 1023
+@mixin mobile {
+  @include sm {
+    @content;
+  }
+}
+
+// 768 ~ 1023
+@mixin tablet {
+  @include md {
+    @content;
+  }
+}
+
+// 1024 ~
+@mixin desktop {
+  @include lg {
+    @content;
+  }
+}
+
+@mixin inner {
+  width: 100%;
+  max-width: 512px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    width: 704px;
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include desktop {
+    width: 980px;
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+
+@mixin ellipsis($lines: 1) {
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* stylelint-disable-next-line order/properties-order */
+  -webkit-line-clamp: $lines;
+  /* stylelint-disable-next-line order/properties-order */
+  -webkit-box-orient: vertical;
+  white-space: initial;
+}
+
+@mixin border-gradient($border-width, $color) {
+  position: relative;
+  z-index: 1;
+  background-clip: padding-box;
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+    padding: $border-width;
+    border: 1px solid;
+    border-radius: 8px;
+    background: $color;
+    background-origin: border-box;
+    background-position: 0 0;
+    background-size: 200% 100%;
+    content: "";
+    inset: calc(0px - $border-width);
+    -webkit-mask: conic-gradient(#fff 0 0) content-box, conic-gradient(#fff 0 0) padding-box;
+    mask: conic-gradient(#fff 0 0) content-box, conic-gradient(#fff 0 0) padding-box;
+
+    // mask-composite: exclude;
+    /* stylelint-disable-next-line order/properties-order */
+    -webkit-mask-composite: xor;
+    mask-composite: xor;
+    pointer-events: none;
+    transition: background-position 600ms ease-in-out;
+  }
+
+  &:hover::before {
+    background-position: 100% 0;
+  }
+}
+
+@mixin color-gradient($color) {
+  background: $color;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin transition-default($properties...) {
+  $transition: ();
+  $will-change: ();
+
+  @each $property in $properties {
+    /* stylelint-disable-next-line scss/no-global-function-names */
+    $transition: append($transition, $property 0.3s ease-in-out, $separator: comma);
+    /* stylelint-disable-next-line scss/no-global-function-names */
+    $will-change: append($will-change, $property, $separator: comma);
+  }
+
+  transition: $transition;
+  will-change: $will-change;
+}
+
+@mixin a11y {
+  position: absolute !important;
+  display: block !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  word-break: initial !important;
+  word-wrap: initial !important;
+}
+
+@mixin hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+}
+
+@mixin scroll-style($width: 4px, $gap: 4px, $color: $gray20) {
+  &::-webkit-scrollbar {
+    width: calc(#{$width + ($gap * 2)});
+    height: calc(#{$width + ($gap * 2)});
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: $gap solid transparent;
+    border-radius: 100px;
+    background-clip: content-box;
+    background-color: $color;
+  }
+}

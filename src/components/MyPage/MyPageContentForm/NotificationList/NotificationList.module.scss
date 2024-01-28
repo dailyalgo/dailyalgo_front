@@ -1,0 +1,28 @@
+.notification-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid 4px $gray20;
+    padding: 20px 0;
+
+    &-text {
+      @include head-4;
+    }
+
+    .notification-all-read-btn {
+      @include body-2;
+      color: $gray40;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $primary-1;
+      }
+    }
+  }
+}

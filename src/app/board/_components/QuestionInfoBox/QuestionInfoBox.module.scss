@@ -1,0 +1,90 @@
+.question-info-box-wrap {
+  padding: 28px 24px;
+  border: 1px solid $gray20;
+  border-radius: 16px;
+
+  .box-title {
+    @include head-4;
+
+    & + .input-block-wrap {
+      margin-top: 30px;
+    }
+  }
+
+  .add-tag-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    span {
+      @include body-2;
+      color: $gray40;
+      margin: 4px 0;
+    }
+
+    .add-tag-button {
+      display: flex;
+      align-items: flex-start;
+      color: #898989;
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: 1px solid #898989;
+      cursor: pointer;
+    }
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    gap: 8px;
+    span[class*="tag"] {
+      max-width: 150px;
+      @include ellipsis;
+      display: block;
+    }
+    .tag-wrap {
+      position: relative;
+      .tag-delete-btn {
+        display: none;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        padding: 2px;
+        background-color: $white;
+        border: 1px solid $gray20;
+        border-radius: 50%;
+      }
+      &:hover {
+        .tag-delete-btn {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.input-block-wrap {
+  & + .input-block-wrap {
+    margin-top: 16px;
+  }
+
+  .input-label {
+    @include body-1;
+
+    & + * {
+      margin-top: 4px;
+    }
+  }
+
+  .input-sub-label {
+    @include body-2;
+
+    display: block;
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: $gray60;
+  }
+}

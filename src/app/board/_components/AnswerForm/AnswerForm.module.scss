@@ -1,0 +1,74 @@
+.answer-form-wrap {
+  display: flex;
+  gap: 30px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 55px 0;
+
+  .left {
+    width: 380px;
+
+    [class*="noted-box-wrap"] {
+      margin-top: 20px;
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    .title {
+      @include head-3;
+
+      & + .input-wrap {
+        margin-top: 16px;
+      }
+    }
+
+    .title-name {
+      margin-bottom: 12px;
+    }
+
+    .sub-title {
+      @include head-4;
+
+      margin-bottom: 12px;
+    }
+
+    .input-wrap {
+      margin-top: 24px;
+    }
+
+    .title-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .code-editor-wrap {
+      overflow: hidden;
+      border: 1px solid $gray20;
+      border-radius: 16px;
+    }
+
+    .markdown-wrap {
+      overflow: hidden;
+      height: 330px;
+      border: 1px solid $gray20;
+      border-radius: 16px;
+      padding: 12px 8px;
+      .question-contents {
+        resize: none;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: transparent;
+        @include scroll($thumb: $gray20, $track: $gray10);
+      }
+    }
+
+    // TODO: 버튼 공통 스타일 수정 요망
+    [class*="btn"] {
+      width: 160px;
+      margin-top: 28px;
+    }
+  }
+}

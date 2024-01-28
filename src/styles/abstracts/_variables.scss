@@ -1,0 +1,51 @@
+// variables
+// colors
+$color-blue: #1B5CED;
+$color-sky-blue: #00C3FF;
+$color-light-gray: #D5DCEF;
+$color-gray: #d2d2d2;
+$color-neon-red: #FF4568;
+$color-red: #FF0000;
+$color-white: #f6f6f6;
+
+// breakpoint
+$breakpoint-sm: 768px;
+$breakpoint-md: 1280px;
+/* iOS 브라우저 높이 대응 */
+$vh: var(--vh, 1vh);
+
+/* Font Bse */
+$base-size: 16px;
+$font-name: "NotoSans";
+
+/* Basic Color */
+$white: #fff;
+$black: #000;
+
+/* Primary Color */
+$primary-1: #1B5CED;
+$primary-2: #00C3FF;
+$primary-3: #D5DCEF;
+$primary-1-hover: #0241CF;
+$disabled: #BEC6D8;
+
+/* Tag Color */
+$tag-1: #FF4568;
+
+/* Gray */
+$gray100: #1a1a1a;
+$gray90: #262626;
+$gray80: #404040;
+$gray70: #595959;
+$gray60: #737373;
+$gray50: #8c8c8c;
+$gray40: #a6a6a6;
+$gray30: #bfbfbf;
+$gray20: #d2d2d2;
+$gray10: #f6f6f6;
+$gray00: #fff;
+
+/* Status colors */
+$positive: #0065dc; // 아직 없음
+$negative: #f00;
+

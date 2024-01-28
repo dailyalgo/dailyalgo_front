@@ -1,0 +1,31 @@
+.side-tab-wrap {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+  gap: 30px;
+
+  .tab-list {
+    display: flex;
+    width: 175px;
+    flex-direction: column;
+
+    .tab-item {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      transition: all 0.2s ease-in-out;
+
+      &.active {
+        background-color: $primary-1;
+        color: $white;
+      }
+    }
+  }
+
+  .tab-contents-wrap {
+    flex: 1;
+  }
+}

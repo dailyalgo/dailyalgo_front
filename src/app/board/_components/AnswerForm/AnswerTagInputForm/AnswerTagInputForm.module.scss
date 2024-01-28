@@ -1,0 +1,22 @@
+.answer-tag-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 16px;
+  margin-bottom: 29px;
+
+  > p {
+    @include body-1;
+
+    > span {
+      @include body-2;
+      color: $gray60;
+      margin-left: 3px;
+    }
+  }
+
+  .tag-wrap {
+    display: flex;
+    gap: 8px;
+  }
+}

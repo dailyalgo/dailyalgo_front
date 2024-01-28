@@ -1,0 +1,29 @@
+.pagination-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+
+  .number-btn:hover {
+    color: $primary-1-hover;
+    cursor: pointer;
+  }
+
+  .is-selected {
+    color: $primary-1;
+    text-decoration: underline;
+  }
+
+  .page-control-btn:first-child {
+    transform: rotate(90deg);
+  }
+
+  .page-control-btn:last-child {
+    transform: rotate(-90deg);
+  }
+
+  .page-control-btn {
+    cursor: pointer;
+  }
+}

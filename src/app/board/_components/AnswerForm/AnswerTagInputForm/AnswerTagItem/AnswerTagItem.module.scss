@@ -1,0 +1,11 @@
+.tag-item {
+  padding: 8px 27px;
+  border: 1px solid $gray20;
+  border-radius: 50px;
+  cursor: pointer;
+
+  &.active-tag {
+    color: $primary-1;
+    border-color: $primary-1;
+  }
+}

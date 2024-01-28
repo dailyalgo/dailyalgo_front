@@ -1,0 +1,19 @@
+.tag {
+  @include body-2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  border-radius: 50px;
+  background-color: $primary-3;
+  color: $primary-1;
+}
+
+button.tag {
+  @include transition-default(background-color);
+
+  &:hover {
+    background-color: #c3cdea;
+  }
+}

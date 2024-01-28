@@ -1,0 +1,45 @@
+.mypage-questions-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .mypage-questions-header {
+    border-bottom: solid 4px $gray20;
+    padding: 20px 0;
+
+    &-text {
+      @include head-4;
+
+      .mypage-questions-header-highlight {
+        @include head-4;
+        color: $primary-1;
+      }
+    }
+  }
+
+  .mypage-none-result-wrap {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 160px;
+
+    .text-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    span {
+      color: $gray40;
+    }
+
+    .go-to-home-btn {
+      margin-top: 20px;
+      color: $primary-1;
+      text-decoration: underline;
+    }
+  }
+}

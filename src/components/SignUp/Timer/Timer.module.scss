@@ -1,0 +1,11 @@
+label {
+  span {
+    &.timer {
+      position: absolute;
+      width: fit-content;
+      top: 20px;
+      left: 270px;
+      color: $color-red;
+    }
+  }
+}

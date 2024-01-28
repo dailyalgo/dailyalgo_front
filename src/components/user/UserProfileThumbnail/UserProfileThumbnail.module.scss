@@ -1,0 +1,11 @@
+.user-profile-thumbnail-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .user-name {
+    @include body-2;
+
+    color: $primary-1;
+  }
+}

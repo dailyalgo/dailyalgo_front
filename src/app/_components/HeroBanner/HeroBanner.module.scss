@@ -1,0 +1,58 @@
+.hero-banner-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 40px;
+  padding-right: 96px;
+  border-radius: 16px;
+  background-color: $gray10;
+  gap: 95px;
+
+  .text-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .banner-title {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: 700;
+
+      & ~ div {
+        @include body-1;
+
+        line-height: 140%;
+
+        a {
+          color: $primary-1;
+          text-decoration: underline;
+          text-underline-offset: 0.2em;
+        }
+      }
+      
+      & + div {
+        margin-top: 24px;
+
+        & + div {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  .image-wrap {
+    position: relative;
+    width: 247px;
+    height: 165px;
+    flex-shrink: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    svg path {
+      stroke: #898989;
+    }
+  }
+}

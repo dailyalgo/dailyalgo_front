@@ -1,0 +1,14 @@
+.notification-btn-wrap {
+  position: relative;
+
+  .notification-badge {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: $tag-1;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -2px;
+  }
+}

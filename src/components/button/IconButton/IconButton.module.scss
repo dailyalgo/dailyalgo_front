@@ -1,0 +1,48 @@
+.btn-icon {
+  display: inline-flex;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  align-items: center;
+  justify-content: center;
+
+  :global {
+    .hover-color {
+      @include transition-default(fill, fill-opacity);
+    }
+  }
+
+  @include desktop {
+    &:hover {
+      svg {
+        :global {
+          .hover-color {
+            fill-opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  &.custom-icon {
+    :global {
+      svg {
+        .hover-color {
+          fill: var(--icon-color);
+        }
+      }
+    }
+
+    @include desktop {
+      &:hover {
+        svg {
+          :global {
+            .hover-color {
+              fill: var(--icon-hover-color);
+              fill-opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
